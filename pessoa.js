@@ -9,13 +9,19 @@ class Pessoa {
 
     caminhar () {
         if (this.caminhando === true) {
-            console.log(`A pessoa ${this.nome} está caminhando`)
+            console.log(`${this.nome} está caminhando`)
         } else {
             console.log(`${this.nome} está parado`)
         }
     }
+
+    caracteristicas () {
+        console.log(`${this.nome} tem ${this.idade} anos de idade, pesa ${this.peso}kg e mede ${this.altura}m de altura`)
+    }
 }
 
-const person = new Pessoa ('Ricardo', 40, 70, 1.80)
+const person = new Pessoa ('Ricardo', 40, 70, 1.81)
 person.caminhando =true
+person.caminhando =false
 person.caminhar()
+person.caracteristicas()
