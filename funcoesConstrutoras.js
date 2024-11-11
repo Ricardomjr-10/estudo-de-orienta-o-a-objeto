@@ -9,15 +9,16 @@
         this.name = name
         this.email = email
 
-        this.login = function () {
-            return `${this.name} fez login`
-        }
+    }
+
+    Studante.prototype.login = function () {
+        return `${this.name} fez login`
     }
 
 const gabrielFialho = new Studante('Gabriel Fialho', 'gabrielf@rogermelo.com.br')
 const brenoLemos = new Studante('Breno lemos', 'brenolemos@rogermelo.com.br')
 
-console.log(gabrielFialho.login(), brenoLemos.login())
+console.log(gabrielFialho, brenoLemos)
 
 //prototypes
 console.log([].includes())
