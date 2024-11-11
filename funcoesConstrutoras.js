@@ -15,10 +15,14 @@
         return `${this.name} fez login`
     }
 
+    Studante.prototype.comment = function () {
+        return `${this.name} comentou`
+    }
+
 const gabrielFialho = new Studante('Gabriel Fialho', 'gabrielf@rogermelo.com.br')
 const brenoLemos = new Studante('Breno lemos', 'brenolemos@rogermelo.com.br')
 
-console.log(gabrielFialho, brenoLemos)
+console.log(gabrielFialho.login(), brenoLemos.comment())
 
 //prototypes
 console.log([].includes())
