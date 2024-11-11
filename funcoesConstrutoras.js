@@ -1,4 +1,4 @@
-/* class Studante {
+class Studante {
     constructor (name, email) {
         this.name = name
         this.emal = email
@@ -7,9 +7,17 @@
     comment () {
         return `${this.name} comentou`
     }
+
+    static formatDataBase (aString) {
+        return aString
+        .toUpperCase()
+        .replaceAll(' ', '_')
+    }
 }
- */
-    function Studante (name, email) { // classe por baixo dos panos
+
+
+
+/*     function Studante (name, email) { // classe por baixo dos panos
         this.name = name
         this.email = email
 
@@ -28,7 +36,7 @@
         .toUpperCase()
         .replaceAll(' ', '_')
     }
-   
+    */
 
 const gabrielFialho = new Studante('Gabriel Fialho', 'gabrielf@rogermelo.com.br')
 const brenoLemos = new Studante('Breno lemos', 'brenolemos@rogermelo.com.br')
@@ -37,5 +45,6 @@ console.log(gabrielFialho.login(), brenoLemos.comment())
 console.log(gabrielFialho, brenoLemos)
 console.log(Studante.formatDataBase('string para o banco de dados'))
 
+console.dir(Studante)
 //prototypes
 console.log([].includes())
