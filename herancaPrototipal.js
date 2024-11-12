@@ -1,17 +1,24 @@
-function Studante(name, email) { // classe por baixo dos panos
+function Student(name, email) { // classe por baixo dos panos
     this.name = name
     this.email = email
 }
 
-Studante.prototype.login = function login() {
+Student.prototype.login = function login() {
     return `${this.name} fez login`
 }
 
-Studante.prototype.comment = function comment() {
+Student.prototype.comment = function comment() {
     return `${this.name} comentou`
 }
+//herda da funcçã construtora Student
+function TeacherAssistant (name, email, scheduledWeekPosts) {
+    Student.call(this, name, email)//chamndo o this da student
+    this.scheduledWeekPosts = scheduledWeekPosts
+}
 
-const gabrielFialho = new Studante('Gabriel Fialho', 'gabrielf@rogermelo.com.br')
-const brenoLemos = new Studante('Breno lemos', 'brenolemos@rogermelo.com.br')
+const gabrielFialho = new Student('Gabriel Fialho', 'gabrielf@rogermelo.com.br')
+const brenoLemos = new Student('Breno lemos', 'brenolemos@rogermelo.com.br')
 
-console.log(gabrielFialho, brenoLemos)
+const arthurSouza = new TeacherAssistant('artur', 'ar@.com')
+
+console.log(gabrielFialho, brenoLemos, arthurSouza)
