@@ -16,6 +16,9 @@ function TeacherAssistant (name, email, scheduledWeekPosts) {
     this.scheduledWeekPosts = scheduledWeekPosts
 }
 
+//para que tenha acesso a funcao no portotype
+TeacherAssistant.prototype = Object.create(Student.prototype)
+
 TeacherAssistant.prototype.giveBadge = function giveBadge ({name}) {
     return `${this.name} deu uma medalha para ${name}`
 }
