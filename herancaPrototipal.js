@@ -16,9 +16,13 @@ function TeacherAssistant (name, email, scheduledWeekPosts) {
     this.scheduledWeekPosts = scheduledWeekPosts
 }
 
+TeacherAssistant.prototype.giveBadge = function giveBadge ({name}) {
+    return `${this.name} deu uma medalha para ${name}`
+}
+
 const gabrielFialho = new Student('Gabriel Fialho', 'gabrielf@rogermelo.com.br')
 const brenoLemos = new Student('Breno lemos', 'brenolemos@rogermelo.com.br')
 
-const arthurSouza = new TeacherAssistant('artur', 'ar@.com')
+const arthurSouza = new TeacherAssistant('artur', 'ar@.com', false)
 
-console.log(gabrielFialho, brenoLemos, arthurSouza)
+console.log(arthurSouza.giveBadge(brenoLemos),  arthurSouza)
