@@ -1,4 +1,4 @@
-class a {
+/* class a {
     first () {
         return
     }
@@ -14,6 +14,29 @@ class b extends a {
     }
 }
 
-const obj = new b()
+const obj = new b() */
 
-console.log(obj.second())
+const a ={
+    first () {
+        return 1
+    }
+}
+
+const b = {
+    second () {
+        return 'naaoooo'
+    }
+}
+
+const c = {
+    third () {
+        return 3
+    }
+}
+
+const obj = {
+    ...a,
+    ...c
+}
+
+console.log(obj)// heranca classica é infelxivel por natureza
