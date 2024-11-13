@@ -34,3 +34,13 @@ console.log(user2.incrementCounter())
 console.log(user2.incrementCounter())
 console.log(user3.incrementCounter())
 console.log(user3.incrementCounter())
+
+//vantagens da factory function 
+//nao te deixa tentado a fazer niveis de herança na aplicacao
+//nao precisa dio new
+//o comportamento do this volta a ser o padrao
+//quanto menos this melhor
+
+//desvantagens
+//uma pouco mais lenta - só precisa se for lib ou framwork -
+//trabalha em cima da performance percebida
