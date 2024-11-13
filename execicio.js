@@ -19,5 +19,9 @@ carro1.color = 'white'
 const carro2 = Object.create(obj)
 carro2.color = 'black'
 
+const carro3 = Object.create(obj)
+carro3.color = 'vermelho'
+
 console.log(carro1.getColor())
 console.log(carro2.getColor())
+console.log(carro3.getColor())
