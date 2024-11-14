@@ -6,6 +6,13 @@
 //     }
 //   - Descomente o código e crie a função.
 
+const arrayToObj = (array) => {
+  const obj = array.reduce((acc, [chave, valor]) => {
+    acc[chave] = valor
+    return acc
+  }, {})
+  return obj
+}
 
 console.log(
   arrayToObj([
